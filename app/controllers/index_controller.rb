@@ -1,14 +1,13 @@
 class IndexController < ApplicationController
-	USERNAME, PASSWORD = "asagao", "pasmo"
+	USERS = { "lifo" => "world" }
 
 	before_filter :authenticate
 
 	private
 
 	def authenticate
-		authenticate_or_request_with_http_basic do |username, password|
-			username == USERNAME &&
-			Digest::SHA1.hexdigest(password) == PASSWORD
+		authenticate_or_request_with_http_digest do |username|
+			USERS[username]
 		end
 	end
 end
