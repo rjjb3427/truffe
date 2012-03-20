@@ -3,6 +3,9 @@ class IndexController < ApplicationController
 
 	before_filter :authenticate
 
+	def index
+	end
+
 	private
 
 	def authenticate
