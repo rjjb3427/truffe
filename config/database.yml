@@ -32,7 +32,7 @@ test:
   socket: /opt/local/var/run/mysql5/mysqld.sock
 
 production:
-  adapter: mysql2
+  adapter: postgresql
   encoding: utf8
   reconnect: false
   database: truffe_production
