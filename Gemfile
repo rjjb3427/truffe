@@ -14,7 +14,7 @@ group :production do
 	gem 'thin'
 end
 
-gem 'rake', '0.8.7'
+gem 'rake', '0.9.2'
 
 # Gems used only for assets and not required
 # in production environments by default.
